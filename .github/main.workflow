@@ -1,5 +1,5 @@
 action "cf-cli" {
-  uses = "./cf-cli/"
+  uses = "./"
 }
 
 workflow "Example" {
@@ -8,7 +8,7 @@ workflow "Example" {
 }
 
 action "Show orgs in PCF" {
-  uses = "./cf-cli"
+  uses = "./"
   args = "orgs"
   secrets = ["CF_USERNAME", "CF_PASSWORD"]
 }
