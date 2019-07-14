@@ -1,4 +1,4 @@
-# GitHub Action for NPM
+# GitHub Action for PCF
 
 This Action for [pcf](https://docs.run.pivotal.io/) enables arbitrary actions with the `cf` command-line client, including pushing code to Pivotal Cloud Foundry.
 
