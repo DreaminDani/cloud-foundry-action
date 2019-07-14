@@ -2,7 +2,8 @@
 
 
 if [ -n "$CF_USERNAME" ] && [ -n "$CF_PASSWORD" ]; then
-  cf login -a "https://api.run.pivotal.io" -u $CF_USERNAME -p $CF_PASSWORD
+  cf api "https://api.run.pivotal.io"
+  cf auth
 fi
 
 sh -c "cf $*"
