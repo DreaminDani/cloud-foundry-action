@@ -9,5 +9,5 @@ workflow "Example" {
 
 action "Deploy to PCF" {
   uses = "./cf-cli"
-  args = "Hello World"
+  args = "--version"
 }
