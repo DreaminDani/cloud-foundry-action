@@ -4,10 +4,11 @@ action "cf-cli" {
 
 workflow "Example" {
   on = "push"
-  resolves = ["Deploy to PCF"]
+  resolves = ["Show orgs in PCF"]
 }
 
-action "Deploy to PCF" {
+action "Show orgs in PCF" {
   uses = "./cf-cli"
-  args = "--version"
+  args = "orgs"
+  secrets = ["CF_USERNAME", "CF_PASSWORD"]
 }
