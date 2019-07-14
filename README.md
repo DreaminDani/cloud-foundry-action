@@ -29,7 +29,8 @@ For more info on command line authentication, see http://cli.cloudfoundry.org/en
 ### Environment variables
 
 * `CF_API` - **Optional**. Target api url (see http://cli.cloudfoundry.org/en-US/cf/api.html)
-* `CF_TARGET`- **Optional**. Targeted org or space (see http://cli.cloudfoundry.org/en-US/cf/target.html)
+* `CF_TARGET_ORG`- **Optional**. Targeted org (see http://cli.cloudfoundry.org/en-US/cf/target.html)
+* `CF_TARGET_SPACE`- **Optional**. Targeted space (see http://cli.cloudfoundry.org/en-US/cf/target.html)
 
 #### Example
 
