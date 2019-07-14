@@ -2,7 +2,7 @@ FROM debian:stable-slim
 
 LABEL "com.github.actions.name"="Deploy to PCF"
 LABEL "com.github.actions.description"="Pivotal Cloud Foundry Deploy"
-LABEL "com.github.actions.icon"="upload-clouud"
+LABEL "com.github.actions.icon"="upload-cloud"
 LABEL "com.github.actions.color"="green"
 
 LABEL "repository"="https://github.com/d3sandoval/cloud-foundry-action"
