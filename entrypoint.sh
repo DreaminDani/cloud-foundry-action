@@ -10,7 +10,7 @@ if [ -n "$CF_USERNAME" ] && [ -n "$CF_PASSWORD" ]; then
   cf auth "$CF_USERNAME" "$CF_PASSWORD"
 fi
 
-if [ -n "$CF_TARGET" ] then
+if [ -n "$CF_TARGET" ]; then
   cf target "$CF_TARGET"
 fi
 
