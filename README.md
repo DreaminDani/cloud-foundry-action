@@ -7,16 +7,21 @@ This Action for [pcf](https://docs.run.pivotal.io/) enables arbitrary actions wi
 An example workflow to publish your code to PCF:
 
 ```hcl
-workflow "Build, Test, and Publish" {
+workflow "Deploy to PCF after build" {
+  resolves = ["Deploy to PCF"]
   on = "push"
-  resolves = ["Publish"]
 }
 
-action "Publish" {
-  uses = "actions/cloud-foundry-action"
-  args = "push APP_NAME"
+action "Deploy to PCF" {
+  uses = "d3sandoval/cloud-foundry-action@1.1.1"
   secrets = ["CF_USERNAME", "CF_PASSWORD"]
+  env = {
+    CF_TARGET_ORG = "my-org"
+    CF_TARGET_SPACE = "development"
+  }
+  args = "push APP_NAME"
 }
+
 ```
 
 ### Secrets

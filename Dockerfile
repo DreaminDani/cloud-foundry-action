@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 
-LABEL "com.github.actions.name"="Deploy to PCF"
-LABEL "com.github.actions.description"="Pivotal Cloud Foundry Deploy"
+LABEL "com.github.actions.name"="Pivotal Cloud Foundry (PCF) CLI"
+LABEL "com.github.actions.description"="Deploy and Manage PWS, PCF, and Pivotal services using the latest version of the cf cli"
 LABEL "com.github.actions.icon"="upload-cloud"
 LABEL "com.github.actions.color"="green"
 
