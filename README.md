@@ -42,10 +42,14 @@ For more info on command line authentication, see http://cli.cloudfoundry.org/en
 To authenticate and publish to a cloud foundry instance:
 
 ```hcl
-action "Publish" {
-  uses = "actions/cloud-foundry-action"
-  args = "push APP_NAME"
+action "Deploy to PCF" {
+  uses = "d3sandoval/cloud-foundry-action@1.1.1"
   secrets = ["CF_USERNAME", "CF_PASSWORD"]
+  env = {
+    CF_TARGET_ORG = "my-org"
+    CF_TARGET_SPACE = "development"
+  }
+  args = "push APP_NAME"
 }
 ```
 
